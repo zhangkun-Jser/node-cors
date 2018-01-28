@@ -6,10 +6,7 @@ var server = http.createServer(function(req, res) {
   // res.setHeader('Content-Type', 'text/plain')
   //定向cors跨域
   res.setHeader('Access-Control-Allow-Origin', req.headers.origin)
-  res.setHeader(
-    'Access-Control-Allow-Headers',
-    'Origin, X-Requested-With, Content-Type, Accept'
-  )
+  res.setHeader('Access-Control-Allow-Headers','Origin, X-Requested-With, Content-Type, Accept')
   res.end('hello nodejs')
 })
 server.listen(port, function() {
