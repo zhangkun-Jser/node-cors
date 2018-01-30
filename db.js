@@ -1,7 +1,3 @@
-//引入mongodb模块，获得客户端对象
-// var MongoClient = require('mongodb').MongoClient;
-// var DB_CONN_STR = 'mongodb://localhost:27017/gomall';
-
 //添加数据
 var insertData = function (db, callback) {
   //获得指定的集合 
@@ -61,18 +57,6 @@ var delData = function (db, callback) {
     callback(result);
   });
 }
-
-//使用客户端连接数据，并指定完成时的回调方法
-// MongoClient.connect(DB_CONN_STR, function (err, db) {
-//   console.log("连接成功！");
-//   //执行插入数据操作，调用自定义方法
-//   delData(db, function (result) {
-//     //显示结果
-//     console.log(result);
-//     //关闭数据库
-//     db.close();
-//   });
-// });
 
 module.exports={
   updateData,

@@ -4,7 +4,7 @@ var app = express()
 app.use(bodyParser.urlencoded({ extended: false }))
 var hostName = '127.0.0.1'
 var port = 8888
-
+//引入mongodb模块，获得客户端对象
 var MongoClient = require('mongodb').MongoClient;
 var DB_CONN_STR = 'mongodb://localhost:27017/gomall';
 
@@ -32,7 +32,6 @@ app.get('/get', function (req, res) {
       db.close();
     });
   });
-  // res.send('这是get请求')
 })
 
 app.post('/post', function (req, res) {
